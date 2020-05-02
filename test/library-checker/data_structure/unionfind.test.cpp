@@ -12,7 +12,7 @@ int main(){
         int t, u, v;
         cin >> t >> u >> v;
         if(t == 0) uf.merge(u, v);
-        else cout << uf.is_same(u, v) << endl;
+        else cout << uf.is_same(u, v)+1 << endl;
     }
     return 0;
 }
