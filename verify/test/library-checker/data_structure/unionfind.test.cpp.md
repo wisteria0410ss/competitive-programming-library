@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../../../assets/css/copy-button.css" />
 
 
-# :x: test/library-checker/data_structure/unionfind.test.cpp
+# :heavy_check_mark: test/library-checker/data_structure/unionfind.test.cpp
 
 <a href="../../../../index.html">Back to top page</a>
 
 * category: <a href="../../../../index.html#c4b8fe8a8231f4c5b6444b288e0b90cd">test/library-checker/data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/library-checker/data_structure/unionfind.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-02 16:42:37+09:00
+    - Last commit date: 2020-05-02 16:44:01+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/unionfind">https://judge.yosupo.jp/problem/unionfind</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="../../../../library/data_structure/unionfind.hpp.html">data_structure/unionfind.hpp</a>
+* :heavy_check_mark: <a href="../../../../library/data_structure/unionfind.hpp.html">data_structure/unionfind.hpp</a>
 
 
 ## Code
@@ -61,7 +61,7 @@ int main(){
         int t, u, v;
         cin >> t >> u >> v;
         if(t == 0) uf.merge(u, v);
-        else cout << uf.is_same(u, v)+1 << endl;
+        else cout << uf.is_same(u, v) << endl;
     }
     return 0;
 }
@@ -118,7 +118,7 @@ int main(){
         int t, u, v;
         cin >> t >> u >> v;
         if(t == 0) uf.merge(u, v);
-        else cout << uf.is_same(u, v)+1 << endl;
+        else cout << uf.is_same(u, v) << endl;
     }
     return 0;
 }

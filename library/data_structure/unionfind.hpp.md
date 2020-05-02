@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: data_structure/unionfind.hpp
+# :heavy_check_mark: data_structure/unionfind.hpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -38,7 +38,7 @@ layout: default
 
 ## Verified with
 
-* :x: <a href="../../verify/test/library-checker/data_structure/unionfind.test.cpp.html">test/library-checker/data_structure/unionfind.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/library-checker/data_structure/unionfind.test.cpp.html">test/library-checker/data_structure/unionfind.test.cpp</a>
 
 
 ## Code
