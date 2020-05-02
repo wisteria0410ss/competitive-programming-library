@@ -1,3 +1,4 @@
+import datetime
 import glob
 import json
 
@@ -33,6 +34,7 @@ def generate():
         if elem is not None:
             snippet[elem['prefix']] = elem
     with open('cpp.json', 'w') as f:
+        f.write('// last modified: ' + str(datetime.datetime.now()) + '\n')
         json.dump(snippet, f, ensure_ascii=False, indent=4)
 
 if __name__ == '__main__':
