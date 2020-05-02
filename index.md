@@ -42,6 +42,13 @@ layout: default
 * :heavy_check_mark: <a href="library/data_structure/unionfind.hpp.html">data_structure/unionfind.hpp</a>
 
 
+<div id="c4b8fe8a8231f4c5b6444b288e0b90cd"></div>
+
+### test/library-checker/data_structure
+
+* :warning: <a href="library/test/library-checker/data_structure/static_rmq.cpp.html">test/library-checker/data_structure/static_rmq.cpp</a>
+
+
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/static_range_sum.test.cpp.html">test/library-checker/data_structure/static_range_sum.test.cpp</a>
