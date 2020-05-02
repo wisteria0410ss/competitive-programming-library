@@ -20,9 +20,8 @@ jobs:
         git config --local user.email "wisteria0410ss@gmail.com"
         git config --local user.name "wisteria0410ss"
         git add cpp.json
-        git commit -m "generate cpp.json"
-        echo done.
-
+        git commit -m "generate cpp.json" --allow-empty
+        
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
