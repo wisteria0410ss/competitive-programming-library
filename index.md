@@ -38,12 +38,12 @@ layout: default
 
 ### data_structure
 
-* :heavy_check_mark: <a href="library/data_structure/unionfind.hpp.html">data_structure/unionfind.hpp</a>
+* :x: <a href="library/data_structure/unionfind.hpp.html">data_structure/unionfind.hpp</a>
 
 
 ## Verify Files
 
-* :heavy_check_mark: <a href="verify/test/library-checker/data_structure/unionfind.test.cpp.html">test/library-checker/data_structure/unionfind.test.cpp</a>
+* :x: <a href="verify/test/library-checker/data_structure/unionfind.test.cpp.html">test/library-checker/data_structure/unionfind.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/sample/aplusb.test.cpp.html">test/library-checker/sample/aplusb.test.cpp</a>
 
 
