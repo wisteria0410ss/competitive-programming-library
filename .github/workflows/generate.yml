@@ -21,6 +21,7 @@ jobs:
         git config --local user.name "wisteria0410ss"
         git add cpp.json
         git commit -m "generate cpp.json"
+        echo done.
 
     - name: Push changes
       uses: ad-m/github-push-action@master
