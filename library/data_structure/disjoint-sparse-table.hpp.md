@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: data_structure/disjoint-sparse-table.hpp
+# :heavy_check_mark: data_structure/disjoint-sparse-table.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/disjoint-sparse-table.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-02 20:20:35+09:00
+    - Last commit date: 2020-05-02 20:33:57+09:00
 
 
 
 
 ## Verified with
 
-* :x: <a href="../../verify/test/library-checker/data_structure/static_range_sum.test.cpp.html">test/library-checker/data_structure/static_range_sum.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/library-checker/data_structure/static_range_sum.test.cpp.html">test/library-checker/data_structure/static_range_sum.test.cpp</a>
 
 
 ## Code
@@ -57,14 +57,14 @@ class disjoint_sparse_table{
     size_t length, lg;
 public:
     disjoint_sparse_table(size_t n, Tp *values, Fp f): length(n), func(f){
-        lg = CHAR_BIT * sizeof(int) - __builtin_clz(std::max(1, n-1));
-        table  = malloc(sizeof(Tp*) * lg);
-        *table = malloc(sizeof(Tp) * n * lg);
-        for(size_t i=1;i<lg;++i) table[i] = *table + n * i;
-        for(size_t i=0;i<n;++i) table[0][i] = values[i];
-        for(size_t s=1;s<lg;++s){
+        lg = CHAR_BIT * sizeof(int) - __builtin_clz(std::max((size_t)1, n-1));
+        table  = new Tp*[lg];
+        *table = new Tp[n * lg];
+        for(int i=1;i<lg;++i) table[i] = *table + n * i;
+        for(int i=0;i<n;++i) table[0][i] = values[i];
+        for(int s=1;s<lg;++s){
             size_t w = 1<<s;
-            for(size_t i=0;i<n;i+=w<<1){
+            for(int i=0;i<n;i+=w<<1){
                 size_t l = std::min(i + w, n) - 1, r = i + w;
                 table[s][l] = values[l];
                 for(int j=l-1;j>=i;--j) table[s][j] = f(values[j], table[s][j+1]);
@@ -77,8 +77,8 @@ public:
     Tp get(size_t left, size_t right, Tp id=Tp{}){
         if(left >= right || right > length) return id;
         if(left + 1 == right) return table[0][left];
-        size_t s = CHAR_BIT * sizeof(int) - __builtin_clz(left ^ --right);
-        return f(table[s][left], table[s][right]);
+        size_t s = CHAR_BIT * sizeof(int) - __builtin_clz(left ^ --right) - 1;
+        return func(table[s][left], table[s][right]);
     }
 };
 #pragma endregion
@@ -100,14 +100,14 @@ class disjoint_sparse_table{
     size_t length, lg;
 public:
     disjoint_sparse_table(size_t n, Tp *values, Fp f): length(n), func(f){
-        lg = CHAR_BIT * sizeof(int) - __builtin_clz(std::max(1, n-1));
-        table  = malloc(sizeof(Tp*) * lg);
-        *table = malloc(sizeof(Tp) * n * lg);
-        for(size_t i=1;i<lg;++i) table[i] = *table + n * i;
-        for(size_t i=0;i<n;++i) table[0][i] = values[i];
-        for(size_t s=1;s<lg;++s){
+        lg = CHAR_BIT * sizeof(int) - __builtin_clz(std::max((size_t)1, n-1));
+        table  = new Tp*[lg];
+        *table = new Tp[n * lg];
+        for(int i=1;i<lg;++i) table[i] = *table + n * i;
+        for(int i=0;i<n;++i) table[0][i] = values[i];
+        for(int s=1;s<lg;++s){
             size_t w = 1<<s;
-            for(size_t i=0;i<n;i+=w<<1){
+            for(int i=0;i<n;i+=w<<1){
                 size_t l = std::min(i + w, n) - 1, r = i + w;
                 table[s][l] = values[l];
                 for(int j=l-1;j>=i;--j) table[s][j] = f(values[j], table[s][j+1]);
@@ -120,8 +120,8 @@ public:
     Tp get(size_t left, size_t right, Tp id=Tp{}){
         if(left >= right || right > length) return id;
         if(left + 1 == right) return table[0][left];
-        size_t s = CHAR_BIT * sizeof(int) - __builtin_clz(left ^ --right);
-        return f(table[s][left], table[s][right]);
+        size_t s = CHAR_BIT * sizeof(int) - __builtin_clz(left ^ --right) - 1;
+        return func(table[s][left], table[s][right]);
     }
 };
 #pragma endregion
