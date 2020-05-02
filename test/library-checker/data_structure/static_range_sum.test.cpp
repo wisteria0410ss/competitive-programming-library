@@ -14,7 +14,7 @@ int main(){
     while(q--){
         int l, r;
         cin >> l >> r;
-        cout << dst.get(l, r+1) << endl;
+        cout << dst.get(l, r) << endl;
     }
     return 0;
 }
