@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../../index.html#c4b8fe8a8231f4c5b6444b288e0b90cd">test/library-checker/data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/library-checker/data_structure/point_set_range_composite.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-04 16:37:25+09:00
+    - Last commit date: 2020-05-04 16:44:02+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
@@ -126,13 +126,13 @@ public:
     }
     Tp get(size_t left, size_t right){
         left += len; right += len;
-        Tp lv = e, rv = e;
+        Tp lval = e, rval = e;
         while(left < right){
-            if(left  & 1) lv = f(lv, tree[left ++]);
-            if(right & 1) rv = f(tree[--right], rv);
+            if(left  & 1) lval = f(lval, tree[left ++]);
+            if(right & 1) rval = f(tree[--right], rval);
             left >>= 1; right >>= 1;
         }
-        return f(lv, rv);
+        return f(lval, rval);
     }
 };
 #pragma endregion
