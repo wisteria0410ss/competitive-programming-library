@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../../index.html#c4b8fe8a8231f4c5b6444b288e0b90cd">test/library-checker/data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/library-checker/data_structure/point_add_range_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-04 15:18:54+09:00
+    - Last commit date: 2020-05-04 16:31:32+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_add_range_sum">https://judge.yosupo.jp/problem/point_add_range_sum</a>
@@ -95,16 +95,12 @@ public:
     }
     void set(size_t pos, const Tp &val){
         tree[pos += len] = val;
-        for(pos>>=1; pos>0; pos>>=1){
-            tree[pos] = f(tree[pos<<1 | 0], tree[pos<<1 | 1]);
-        }
+        for(pos>>=1; pos>0; pos>>=1) tree[pos] = f(tree[pos<<1 | 0], tree[pos<<1 | 1]);
     }
     void add(size_t pos, const Tp &val){
         pos += len;
         tree[pos] = f(val, tree[pos]);
-        for(pos>>=1; pos>0; pos>>=1){
-            tree[pos] = f(tree[pos<<1 | 0], tree[pos<<1 | 1]);
-        }
+        for(pos>>=1; pos>0; pos>>=1) tree[pos] = f(tree[pos<<1 | 0], tree[pos<<1 | 1]);
     }
     Tp get(size_t left, size_t right){
         left += len; right += len;
