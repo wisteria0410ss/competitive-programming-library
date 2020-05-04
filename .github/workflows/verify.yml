@@ -3,7 +3,7 @@ name: verify
 on: push
 
 jobs:
-  build:
+  verify:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,5 +22,29 @@ jobs:
         GH_PAT: ${{ secrets.GH_PAT }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         YUKICODER_TOKEN: ${{ secrets.YUKICODER_TOKEN }}
-      run: oj-verify --config-file .verify-helper/config.toml all
-      
+      run: oj-verify --config-file .verify-helper/config.toml all      
+
+  generate:
+    needs: verify
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Generate cpp.json
+      run: |
+        python3 generate.py
+        git config --local user.email "wisteria0410ss@gmail.com"
+        git config --local user.name "wisteria0410ss"
+        git add cpp.json
+        git commit -m "generate cpp.json" --allow-empty
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
