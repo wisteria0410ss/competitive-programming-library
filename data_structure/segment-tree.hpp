@@ -23,13 +23,13 @@ public:
     }
     Tp get(size_t left, size_t right){
         left += len; right += len;
-        Tp lv = e, rv = e;
+        Tp lval = e, rval = e;
         while(left < right){
-            if(left  & 1) lv = f(lv, tree[left ++]);
-            if(right & 1) rv = f(tree[--right], rv);
+            if(left  & 1) lval = f(lval, tree[left ++]);
+            if(right & 1) rval = f(tree[--right], rval);
             left >>= 1; right >>= 1;
         }
-        return f(lv, rv);
+        return f(lval, rval);
     }
 };
 #pragma endregion
