@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: data_structure/partially-persistent-unionfind.hpp
+# :warning: data_structure/partially-persistent-unionfind.hpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -36,9 +36,9 @@ layout: default
 
 
 
-## Verified with
+## Required by
 
-* :x: <a href="../../verify/test/atcoder/code-thanks-festival-2017-open/h-union_sets.test.cpp.html">test/atcoder/code-thanks-festival-2017-open/h-union_sets.test.cpp</a>
+* :warning: <a href="../test/atcoder/code-thanks-festival-2017-open/h-union_sets.cpp.html">test/atcoder/code-thanks-festival-2017-open/h-union_sets.cpp</a>
 
 
 ## Code

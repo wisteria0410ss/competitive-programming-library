@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../../../assets/css/copy-button.css" />
 
 
-# :x: test/atcoder/code-thanks-festival-2017-open/h-union_sets.test.cpp
+# :warning: test/atcoder/code-thanks-festival-2017-open/h-union_sets.cpp
 
 <a href="../../../../index.html">Back to top page</a>
 
 * category: <a href="../../../../index.html#1ad604b59ab5a4e81c3f55a21b409f92">test/atcoder/code-thanks-festival-2017-open</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/atcoder/code-thanks-festival-2017-open/h-union_sets.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-04 22:24:15+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/test/atcoder/code-thanks-festival-2017-open/h-union_sets.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-04 22:25:29+09:00
 
 
 
 
 ## Depends on
 
-* :x: <a href="../../../../library/data_structure/partially-persistent-unionfind.hpp.html">data_structure/partially-persistent-unionfind.hpp</a>
+* :warning: <a href="../../../data_structure/partially-persistent-unionfind.hpp.html">data_structure/partially-persistent-unionfind.hpp</a>
 
 
 ## Code
@@ -85,7 +85,7 @@ int main(){
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/atcoder/code-thanks-festival-2017-open/h-union_sets.test.cpp"
+#line 1 "test/atcoder/code-thanks-festival-2017-open/h-union_sets.cpp"
 // #define PROBLEM "https://atcoder.jp/contests/code-thanks-festival-2017-open/tasks/code_thanks_festival_2017_h"
 
 #include <bits/stdc++.h>
@@ -135,7 +135,7 @@ public:
     }
 };
 #pragma endregion
-#line 5 "test/atcoder/code-thanks-festival-2017-open/h-union_sets.test.cpp"
+#line 5 "test/atcoder/code-thanks-festival-2017-open/h-union_sets.cpp"
 
 using namespace std;
 int main(){
