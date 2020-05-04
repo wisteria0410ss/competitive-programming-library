@@ -1,4 +1,4 @@
-#define PROBLEM ""
+#define PROBLEM "https://judge.yosupo.jp/problem/range_affine_range_sum"
 
 #include <bits/stdc++.h>
 #include "data_structure/lazy-segment-tree.hpp"
