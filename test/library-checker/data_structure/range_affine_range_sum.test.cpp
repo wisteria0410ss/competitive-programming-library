@@ -18,6 +18,7 @@ int main(){
         Op{1, 0},   [](const auto &lhs, const auto &rhs)->Op{ return { lhs.first * rhs.first, lhs.first * rhs.second + lhs.second }; },
         [](auto f, auto x, size_t w)->Tp{ return f.first * x + f.second * w; }
     };
+    
     vector<Tp> a;
     a.reserve(n);
     for(size_t i = 0; i < n; ++i){
