@@ -39,7 +39,7 @@ jobs:
     - name: Generate cpp.json
       run: python3 generate.py
 
-    -name: Push changes
+    - name: Push changes
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
