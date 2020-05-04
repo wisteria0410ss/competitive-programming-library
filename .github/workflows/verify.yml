@@ -23,18 +23,30 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         YUKICODER_TOKEN: ${{ secrets.YUKICODER_TOKEN }}
       run: oj-verify --config-file .verify-helper/config.toml all      
+  
+  generate:
+    needs: verify
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'        
 
     - name: Generate cpp.json
+      run: python3 generate.py
+
+    -name: Push changes
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        python3 generate.py
         git config --local user.email "wisteria0410ss@gmail.com"
         git config --local user.name "wisteria0410ss"
         git remote set-url origin https://wisteria0410ss:${GITHUB_TOKEN}@github.com/wisteria0410ss/competitive-programming-library.git
         git checkout -b master
-        git pull
         git add cpp.json
         git commit -m "generate cpp.json" --allow-empty
         git push origin HEAD
-        
