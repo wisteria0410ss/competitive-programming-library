@@ -41,6 +41,7 @@ jobs:
         python3 generate.py
         git config --local user.email "wisteria0410ss@gmail.com"
         git config --local user.name "wisteria0410ss"
+        git pull
         git add cpp.json
         git commit -m "generate cpp.json" --allow-empty
         
