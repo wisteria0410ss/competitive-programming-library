@@ -16,16 +16,12 @@ public:
     }
     void set(size_t pos, const Tp &val){
         tree[pos += len] = val;
-        for(pos>>=1; pos>0; pos>>=1){
-            tree[pos] = f(tree[pos<<1 | 0], tree[pos<<1 | 1]);
-        }
+        for(pos>>=1; pos>0; pos>>=1) tree[pos] = f(tree[pos<<1 | 0], tree[pos<<1 | 1]);
     }
     void add(size_t pos, const Tp &val){
         pos += len;
         tree[pos] = f(val, tree[pos]);
-        for(pos>>=1; pos>0; pos>>=1){
-            tree[pos] = f(tree[pos<<1 | 0], tree[pos<<1 | 1]);
-        }
+        for(pos>>=1; pos>0; pos>>=1) tree[pos] = f(tree[pos<<1 | 0], tree[pos<<1 | 1]);
     }
     Tp get(size_t left, size_t right){
         left += len; right += len;
