@@ -39,6 +39,7 @@ layout: default
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/test/library-checker/data_structure/point_add_range_sum.test.cpp.html">test/library-checker/data_structure/point_add_range_sum.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/library-checker/data_structure/point_set_range_composite.test.cpp.html">test/library-checker/data_structure/point_set_range_composite.test.cpp</a>
 
 
 ## Code
