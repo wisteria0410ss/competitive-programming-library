@@ -39,7 +39,7 @@ layout: default
 ### data_structure
 
 * :heavy_check_mark: <a href="library/data_structure/disjoint-sparse-table.hpp.html">data_structure/disjoint-sparse-table.hpp</a>
-* :x: <a href="library/data_structure/lazy-segment-tree.hpp.html">data_structure/lazy-segment-tree.hpp</a>
+* :heavy_check_mark: <a href="library/data_structure/lazy-segment-tree.hpp.html">data_structure/lazy-segment-tree.hpp</a>
 * :heavy_check_mark: <a href="library/data_structure/segment-tree.hpp.html">data_structure/segment-tree.hpp</a>
 * :heavy_check_mark: <a href="library/data_structure/unionfind.hpp.html">data_structure/unionfind.hpp</a>
 
@@ -48,7 +48,7 @@ layout: default
 
 ### math
 
-* :question: <a href="library/math/modint.hpp.html">math/modint.hpp</a>
+* :heavy_check_mark: <a href="library/math/modint.hpp.html">math/modint.hpp</a>
 
 
 <div id="c4b8fe8a8231f4c5b6444b288e0b90cd"></div>
@@ -62,7 +62,7 @@ layout: default
 
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/point_add_range_sum.test.cpp.html">test/library-checker/data_structure/point_add_range_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/point_set_range_composite.test.cpp.html">test/library-checker/data_structure/point_set_range_composite.test.cpp</a>
-* :x: <a href="verify/test/library-checker/data_structure/range_affine_range_sum.test.cpp.html">test/library-checker/data_structure/range_affine_range_sum.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/library-checker/data_structure/range_affine_range_sum.test.cpp.html">test/library-checker/data_structure/range_affine_range_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/static_range_sum.test.cpp.html">test/library-checker/data_structure/static_range_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/unionfind.test.cpp.html">test/library-checker/data_structure/unionfind.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/sample/aplusb.test.cpp.html">test/library-checker/sample/aplusb.test.cpp</a>

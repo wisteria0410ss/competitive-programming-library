@@ -25,22 +25,22 @@ layout: default
 <link rel="stylesheet" href="../../../../assets/css/copy-button.css" />
 
 
-# :x: test/library-checker/data_structure/range_affine_range_sum.test.cpp
+# :heavy_check_mark: test/library-checker/data_structure/range_affine_range_sum.test.cpp
 
 <a href="../../../../index.html">Back to top page</a>
 
 * category: <a href="../../../../index.html#c4b8fe8a8231f4c5b6444b288e0b90cd">test/library-checker/data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/library-checker/data_structure/range_affine_range_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-04 16:02:09+09:00
+    - Last commit date: 2020-05-04 16:10:07+09:00
 
 
-* see: <a href=""></a>
+* see: <a href="https://judge.yosupo.jp/problem/range_affine_range_sum">https://judge.yosupo.jp/problem/range_affine_range_sum</a>
 
 
 ## Depends on
 
-* :x: <a href="../../../../library/data_structure/lazy-segment-tree.hpp.html">data_structure/lazy-segment-tree.hpp</a>
-* :question: <a href="../../../../library/math/modint.hpp.html">math/modint.hpp</a>
+* :heavy_check_mark: <a href="../../../../library/data_structure/lazy-segment-tree.hpp.html">data_structure/lazy-segment-tree.hpp</a>
+* :heavy_check_mark: <a href="../../../../library/math/modint.hpp.html">math/modint.hpp</a>
 
 
 ## Code
@@ -48,7 +48,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM ""
+#define PROBLEM "https://judge.yosupo.jp/problem/range_affine_range_sum"
 
 #include <bits/stdc++.h>
 #include "data_structure/lazy-segment-tree.hpp"
@@ -68,6 +68,7 @@ int main(){
         Op{1, 0},   [](const auto &lhs, const auto &rhs)->Op{ return { lhs.first * rhs.first, lhs.first * rhs.second + lhs.second }; },
         [](auto f, auto x, size_t w)->Tp{ return f.first * x + f.second * w; }
     };
+    
     vector<Tp> a;
     a.reserve(n);
     for(size_t i = 0; i < n; ++i){
@@ -98,7 +99,7 @@ int main(){
 {% raw %}
 ```cpp
 #line 1 "test/library-checker/data_structure/range_affine_range_sum.test.cpp"
-#define PROBLEM ""
+#define PROBLEM "https://judge.yosupo.jp/problem/range_affine_range_sum"
 
 #include <bits/stdc++.h>
 #line 3 "data_structure/lazy-segment-tree.hpp"
@@ -161,9 +162,8 @@ public:
         propagate(left, right);
         while(l < r){
             if(l & 1){ tree[l].operation = composition(f, tree[l].operation); ++l; }
-            l >>= 1;
             if(r & 1){ --r; tree[r].operation = composition(f, tree[r].operation); }
-            r >>= 1;
+            l >>= 1; r >>= 1;
         }
         update(left, right);
     }
@@ -179,9 +179,8 @@ public:
         Tp lval = vid, rval = vid;
         while(left < right){
             if(left  & 1){ evaluate(left ); lval = merge(lval, tree[left ].value); ++left ; }
-            left >>= 1;
             if(right & 1){ --right; evaluate(right); rval = merge(tree[right].value, rval); }
-            right >>= 1;
+            left >>= 1; right >>= 1;
         }
         return merge(lval, rval);
     }
@@ -261,6 +260,7 @@ int main(){
         Op{1, 0},   [](const auto &lhs, const auto &rhs)->Op{ return { lhs.first * rhs.first, lhs.first * rhs.second + lhs.second }; },
         [](auto f, auto x, size_t w)->Tp{ return f.first * x + f.second * w; }
     };
+    
     vector<Tp> a;
     a.reserve(n);
     for(size_t i = 0; i < n; ++i){

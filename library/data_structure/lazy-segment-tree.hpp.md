@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: data_structure/lazy-segment-tree.hpp
+# :heavy_check_mark: data_structure/lazy-segment-tree.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy-segment-tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-04 16:02:09+09:00
+    - Last commit date: 2020-05-04 16:10:07+09:00
 
 
 
 
 ## Verified with
 
-* :x: <a href="../../verify/test/library-checker/data_structure/range_affine_range_sum.test.cpp.html">test/library-checker/data_structure/range_affine_range_sum.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/library-checker/data_structure/range_affine_range_sum.test.cpp.html">test/library-checker/data_structure/range_affine_range_sum.test.cpp</a>
 
 
 ## Code
@@ -107,9 +107,8 @@ public:
         propagate(left, right);
         while(l < r){
             if(l & 1){ tree[l].operation = composition(f, tree[l].operation); ++l; }
-            l >>= 1;
             if(r & 1){ --r; tree[r].operation = composition(f, tree[r].operation); }
-            r >>= 1;
+            l >>= 1; r >>= 1;
         }
         update(left, right);
     }
@@ -125,9 +124,8 @@ public:
         Tp lval = vid, rval = vid;
         while(left < right){
             if(left  & 1){ evaluate(left ); lval = merge(lval, tree[left ].value); ++left ; }
-            left >>= 1;
             if(right & 1){ --right; evaluate(right); rval = merge(tree[right].value, rval); }
-            right >>= 1;
+            left >>= 1; right >>= 1;
         }
         return merge(lval, rval);
     }
@@ -201,9 +199,8 @@ public:
         propagate(left, right);
         while(l < r){
             if(l & 1){ tree[l].operation = composition(f, tree[l].operation); ++l; }
-            l >>= 1;
             if(r & 1){ --r; tree[r].operation = composition(f, tree[r].operation); }
-            r >>= 1;
+            l >>= 1; r >>= 1;
         }
         update(left, right);
     }
@@ -219,9 +216,8 @@ public:
         Tp lval = vid, rval = vid;
         while(left < right){
             if(left  & 1){ evaluate(left ); lval = merge(lval, tree[left ].value); ++left ; }
-            left >>= 1;
             if(right & 1){ --right; evaluate(right); rval = merge(tree[right].value, rval); }
-            right >>= 1;
+            left >>= 1; right >>= 1;
         }
         return merge(lval, rval);
     }
