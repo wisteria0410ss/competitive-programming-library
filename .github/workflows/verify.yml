@@ -17,22 +17,24 @@ jobs:
     - name: Install dependencies
       run: pip3 install -U git+https://github.com/kmyk/online-judge-verify-helper.git@master
 
-    - name: Generate cpp.json
-      run: |
-        python3 generate.py
-        git config --local user.email "wisteria0410ss@gmail.com"
-        git config --local user.name "wisteria0410ss"
-        git add cpp.json
-        git commit -m "generate cpp.json" --allow-empty
-        
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-
     - name: Run tests
       env:
         GH_PAT: ${{ secrets.GH_PAT }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         YUKICODER_TOKEN: ${{ secrets.YUKICODER_TOKEN }}
       run: oj-verify --config-file .verify-helper/config.toml all      
+
+    - name: Generate cpp.json
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        python3 generate.py
+        git config --local user.email "wisteria0410ss@gmail.com"
+        git config --local user.name "wisteria0410ss"
+        git remote set-url origin https://wisteria0410ss:${GITHUB_TOKEN}@github.com/wisteria0410ss/competitive-programming-library.git
+        git checkout -b master
+        git pull
+        git add cpp.json
+        git commit -m "generate cpp.json" --allow-empty
+        git push origin HEAD
+        
