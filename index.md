@@ -40,6 +40,7 @@ layout: default
 
 * :heavy_check_mark: <a href="library/data_structure/disjoint-sparse-table.hpp.html">data_structure/disjoint-sparse-table.hpp</a>
 * :heavy_check_mark: <a href="library/data_structure/lazy-segment-tree.hpp.html">data_structure/lazy-segment-tree.hpp</a>
+* :x: <a href="library/data_structure/partially-persistent-unionfind.hpp.html">data_structure/partially-persistent-unionfind.hpp</a>
 * :heavy_check_mark: <a href="library/data_structure/segment-tree.hpp.html">data_structure/segment-tree.hpp</a>
 * :heavy_check_mark: <a href="library/data_structure/unionfind.hpp.html">data_structure/unionfind.hpp</a>
 
@@ -60,6 +61,7 @@ layout: default
 
 ## Verify Files
 
+* :x: <a href="verify/test/atcoder/code-thanks-festival-2017-open/h-union_sets.test.cpp.html">test/atcoder/code-thanks-festival-2017-open/h-union_sets.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/point_add_range_sum.test.cpp.html">test/library-checker/data_structure/point_add_range_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/point_set_range_composite.test.cpp.html">test/library-checker/data_structure/point_set_range_composite.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/range_affine_range_sum.test.cpp.html">test/library-checker/data_structure/range_affine_range_sum.test.cpp</a>
