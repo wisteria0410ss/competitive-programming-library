@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c8f6850ec2ec3fb32f203c1f4e3c2fd2">data_structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data_structure/lazy-segment-tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-04 16:10:07+09:00
+    - Last commit date: 2020-05-04 23:02:42+09:00
 
 
 
@@ -116,7 +116,7 @@ public:
         for(size_t i = 0; i < length; ++i) tree[length + i].value = val[i];
         for(size_t i = length - 1; i > 0; --i) tree[i].value = merge(tree[i<<1 | 0].value, tree[i<<1 | 1].value);
     }
-    Tp get(size_t left, size_t right){        
+    Tp get(size_t left, size_t right){
         if(left >= right) return vid;
         left  += length;
         right += length;
@@ -208,7 +208,7 @@ public:
         for(size_t i = 0; i < length; ++i) tree[length + i].value = val[i];
         for(size_t i = length - 1; i > 0; --i) tree[i].value = merge(tree[i<<1 | 0].value, tree[i<<1 | 1].value);
     }
-    Tp get(size_t left, size_t right){        
+    Tp get(size_t left, size_t right){
         if(left >= right) return vid;
         left  += length;
         right += length;
