@@ -53,10 +53,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git config --local user.email "wisteria0410ss@gmail.com"
-        git config --local user.name "wisteria0410ss"
-        git remote set-url origin https://wisteria0410ss:${GITHUB_TOKEN}@github.com/wisteria0410ss/competitive-programming-library.git
-        git checkout -b master
         git add cpp.json
         git commit -m "generate cpp.json" --allow-empty
         git push origin HEAD
