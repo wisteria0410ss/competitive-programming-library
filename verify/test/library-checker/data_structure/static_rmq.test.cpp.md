@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../../../assets/css/copy-button.css" />
 
 
-# :warning: test/library-checker/data_structure/static_rmq.cpp
+# :heavy_check_mark: test/library-checker/data_structure/static_rmq.test.cpp
 
 <a href="../../../../index.html">Back to top page</a>
 
 * category: <a href="../../../../index.html#c4b8fe8a8231f4c5b6444b288e0b90cd">test/library-checker/data_structure</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/library-checker/data_structure/static_rmq.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-02 20:47:17+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/test/library-checker/data_structure/static_rmq.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-07 17:25:09+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/staticrmq">https://judge.yosupo.jp/problem/staticrmq</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../data_structure/disjoint-sparse-table.hpp.html">data_structure/disjoint-sparse-table.hpp</a>
+* :heavy_check_mark: <a href="../../../../library/data_structure/disjoint-sparse-table.hpp.html">data_structure/disjoint-sparse-table.hpp</a>
 
 
 ## Code
@@ -74,7 +74,7 @@ int main(){
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/library-checker/data_structure/static_rmq.cpp"
+#line 1 "test/library-checker/data_structure/static_rmq.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/staticrmq"
 
 #include <bits/stdc++.h>
@@ -113,7 +113,7 @@ public:
     }
 };
 #pragma endregion
-#line 5 "test/library-checker/data_structure/static_rmq.cpp"
+#line 5 "test/library-checker/data_structure/static_rmq.test.cpp"
 
 using namespace std;
 int main(){

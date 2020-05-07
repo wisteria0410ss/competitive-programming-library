@@ -36,14 +36,10 @@ layout: default
 
 
 
-## Required by
-
-* :warning: <a href="../test/library-checker/data_structure/static_rmq.cpp.html">test/library-checker/data_structure/static_rmq.cpp</a>
-
-
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/test/library-checker/data_structure/static_range_sum.test.cpp.html">test/library-checker/data_structure/static_range_sum.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/library-checker/data_structure/static_rmq.test.cpp.html">test/library-checker/data_structure/static_rmq.test.cpp</a>
 
 
 ## Code

@@ -59,19 +59,13 @@ layout: default
 * :warning: <a href="library/test/atcoder/code-thanks-festival-2017-open/h-union_sets.cpp.html">test/atcoder/code-thanks-festival-2017-open/h-union_sets.cpp</a>
 
 
-<div id="c4b8fe8a8231f4c5b6444b288e0b90cd"></div>
-
-### test/library-checker/data_structure
-
-* :warning: <a href="library/test/library-checker/data_structure/static_rmq.cpp.html">test/library-checker/data_structure/static_rmq.cpp</a>
-
-
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/point_add_range_sum.test.cpp.html">test/library-checker/data_structure/point_add_range_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/point_set_range_composite.test.cpp.html">test/library-checker/data_structure/point_set_range_composite.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/range_affine_range_sum.test.cpp.html">test/library-checker/data_structure/range_affine_range_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/static_range_sum.test.cpp.html">test/library-checker/data_structure/static_range_sum.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/library-checker/data_structure/static_rmq.test.cpp.html">test/library-checker/data_structure/static_rmq.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/data_structure/unionfind.test.cpp.html">test/library-checker/data_structure/unionfind.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library-checker/sample/aplusb.test.cpp.html">test/library-checker/sample/aplusb.test.cpp</a>
 
