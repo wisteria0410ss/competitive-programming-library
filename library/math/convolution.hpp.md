@@ -41,9 +41,15 @@ layout: default
 * :heavy_check_mark: <a href="modint.hpp.html">math/modint.hpp</a>
 
 
+## Required by
+
+* :heavy_check_mark: <a href="convolution-arbitary-mod.hpp.html">math/convolution-arbitary-mod.hpp</a>
+
+
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/test/library-checker/math/convolution.test.cpp.html">test/library-checker/math/convolution.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/library-checker/math/convolution_mod_1000000007.test.cpp.html">test/library-checker/math/convolution_mod_1000000007.test.cpp</a>
 
 
 ## Code
