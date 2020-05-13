@@ -3,28 +3,24 @@
 #include "math/convolution.hpp"
 
 #pragma region convolution-arbitary-mod
-uint64_t add_f01(uint64_t lhs, uint64_t rhs){
+constexpr uint64_t add_f01(uint64_t lhs, uint64_t rhs){
     constexpr uint64_t mod = 0xffffffff00000001;
-    unsigned long long ret;
+    unsigned long long ret = 0;
     if(__builtin_uaddll_overflow(lhs, rhs, &ret)) ret += 0xffffffff;
     return ret < mod ? ret : ret - mod;
 }
-uint64_t mul_f01(uint64_t lhs, uint64_t rhs){
+constexpr uint64_t mul_f01(uint64_t lhs, uint64_t rhs){
     constexpr uint64_t mod = 0xffffffff00000001;
-    unsigned long long ret;
-    asm("movq %2, %%rax\n"
-        "movq %3, %%rdx\n"
-        "mulq %%rdx\n"
-        "movq %%rdx, %0\n"
-        "movq %%rax, %1\n"
-        : "=r"(lhs), "=r"(rhs)
-        : "r"(lhs), "r"(rhs)
-        : "%rax", "%rdx");
+    unsigned long long ret = 0;
+    __uint128_t mul = lhs;
+    mul *= rhs;
+    lhs = mul >> 64;
+    rhs = mul;
     if(__builtin_uaddll_overflow(rhs, (lhs & 0xffffffff) * 0xffffffff, &ret)) ret += 0xffffffff;
     if(__builtin_usubll_overflow(ret, lhs >> 32, &ret)) ret -= 0xffffffff;
     return ret < mod ? ret : ret - mod;
 }
-uint64_t pow_f01(uint64_t x, uint64_t y){
+constexpr uint64_t pow_f01(uint64_t x, uint64_t y){
     uint64_t ret = 1, m = x;
     while(y > 0){
         if(y & 1) ret = mul_f01(ret, m);
@@ -41,7 +37,7 @@ void ntt_bitrev_f01(const uint64_t *input, uint64_t *output, bool rev=false){
 
     static_assert((n & n-1) == 0 && (mod - 1) % n == 0);
     constexpr int st = __builtin_ctzll(n);
-    const uint64_t ninv = pow_f01(n, mod-2);
+    constexpr uint64_t ninv = pow_f01(n, mod-2);
     static std::vector<uint64_t> omega = [](){
         std::vector<uint64_t> ret;
         ret.resize(n+1);
