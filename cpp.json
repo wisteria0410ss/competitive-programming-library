@@ -3,6 +3,7 @@
         "prefix": "partially-persistent-unionfind",
         "description": "競プロ用ライブラリ - partially-persistent-unionfind",
         "body": [
+            "#pragma region partially-persistent-unionfind",
             "class unionfind{",
             "    int last;",
             "    int *parent, *time;",
@@ -44,13 +45,15 @@
             "        v = root(v, t);",
             "        return std::prev(std::lower_bound(size[v].begin(), size[v].end(), std::pair<int, size_t>{ t, length + 1 }))->second;",
             "    }",
-            "};"
+            "};",
+            "#pragma endregion"
         ]
     },
     "segment-tree": {
         "prefix": "segment-tree",
         "description": "競プロ用ライブラリ - segment-tree",
         "body": [
+            "#pragma region segment-tree",
             "template <typename Tp, typename Fp>",
             "class segment_tree{",
             "    Tp *tree;",
@@ -80,13 +83,15 @@
             "        }",
             "        return f(lval, rval);",
             "    }",
-            "};"
+            "};",
+            "#pragma endregion"
         ]
     },
     "lazy-segment-tree": {
         "prefix": "lazy-segment-tree",
         "description": "競プロ用ライブラリ - lazy-segment-tree",
         "body": [
+            "#pragma region lazy-segment-tree",
             "template <typename Tp, typename Op>",
             "class segment_tree{",
             "    struct node{",
@@ -166,13 +171,15 @@
             "        }",
             "        return merge(lval, rval);",
             "    }",
-            "};"
+            "};",
+            "#pragma endregion"
         ]
     },
     "disjoint-sparse-table": {
         "prefix": "disjoint-sparse-table",
         "description": "競プロ用ライブラリ - disjoint-sparse-table",
         "body": [
+            "#pragma region disjoint-sparse-table",
             "template <typename Tp, typename Fp>",
             "class disjoint_sparse_table{",
             "    Tp **table;",
@@ -203,13 +210,15 @@
             "        size_t s = CHAR_BIT * sizeof(int) - __builtin_clz(left ^ --right) - 1;",
             "        return func(table[s][left], table[s][right]);",
             "    }",
-            "};"
+            "};",
+            "#pragma endregion"
         ]
     },
     "unionfind": {
         "prefix": "unionfind",
         "description": "競プロ用ライブラリ - unionfind",
         "body": [
+            "#pragma region unionfind",
             "class unionfind{",
             "    int *tree;",
             "    size_t length;",
@@ -236,13 +245,15 @@
             "        tree[v] = u;",
             "        return true;",
             "    }",
-            "};"
+            "};",
+            "#pragma endregion"
         ]
     },
     "convolution-arbitary-mod": {
         "prefix": "convolution-arbitary-mod",
         "description": "競プロ用ライブラリ - convolution-arbitary-mod",
         "body": [
+            "#pragma region convolution-arbitary-mod",
             "constexpr uint64_t add_f01(uint64_t lhs, uint64_t rhs){",
             "    constexpr uint64_t mod = 0xffffffff00000001;",
             "    unsigned long long ret = 0;",
@@ -325,13 +336,15 @@
             "        int64_t k = (uint64_t)((mz[i] - uz[i] % modc01) / (modf01 % modc01));",
             "        output[i] = modint<mod>{k} * modint<mod>{modf01 % mod} + modint<mod>{uz[i] % mod};",
             "    }",
-            "}"
+            "}",
+            "#pragma endregion"
         ]
     },
     "convolution": {
         "prefix": "convolution",
         "description": "競プロ用ライブラリ - convolution",
         "body": [
+            "#pragma region convolution",
             "template <size_t n, uint32_t mod, uint32_t root>",
             "void ntt(const modint<mod> *input, modint<mod> *output, bool rev=false){",
             "    static_assert((n & n-1) == 0 && (mod - 1) % n == 0);",
@@ -366,13 +379,15 @@
             "    ntt<n, mod, root>(rhs, w);",
             "    for(size_t i=0;i<n;++i) w[i] *= output[i];",
             "    ntt<n, mod, root>(w, output, true);",
-            "}"
+            "}",
+            "#pragma endregion"
         ]
     },
     "modint": {
         "prefix": "modint",
         "description": "競プロ用ライブラリ - modint",
         "body": [
+            "#pragma region modint",
             "template <uint32_t mod>",
             "class modint{",
             "    uint64_t value;",
@@ -426,7 +441,8 @@
             "        }",
             "        return ret;",
             "    }",
-            "};"
+            "};",
+            "#pragma endregion"
         ]
     }
 }
