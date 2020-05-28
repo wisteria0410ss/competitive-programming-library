@@ -12,8 +12,10 @@ def read_library(filename):
         if line.startswith('#pragma region '):
             state = 1
             title = line[15:]
+            body.append(line)
         elif state == 1 and line.startswith('#pragma endregion'):
             state = 2
+            body.append(line)
             break
         elif state == 1:
             body.append(line)
